@@ -33,7 +33,5 @@ RUN cmake \
     -D OONF_VERSION=String=${OONF_VERSION} \
     -D OONF_LOGGING_LEVEL=debug \
     -D CMAKE_BUILD_TYPE:String=Release .. \
-    && make \
+    && make olsrd2_static \
     && make install
-
-ENTRYPOINT ./olsrd2_static eth0
